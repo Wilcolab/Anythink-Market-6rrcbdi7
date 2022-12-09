@@ -59,7 +59,7 @@ const Header = ( props ) => {
           <img alt="logo" src={logo} />
         </Link>
 
-        {currentUser ? (
+        {props.currentUser ? (
           <LoggedInView currentUser={props.currentUser} />
         ) : (
           <LoggedOutView currentUser={props.currentUser} />
