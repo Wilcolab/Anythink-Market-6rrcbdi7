@@ -49,7 +49,7 @@ const LoggedInView = (props) => {
   );
 };
 
-const Header = (props) => {
+const Header = ({ currentUser }) => {
     return (
       <nav
         className="navbar navbar-expand-md navbar-dark"
@@ -59,10 +59,10 @@ const Header = (props) => {
           <img alt="logo" src={logo} />
         </Link>
 
-        {props.currentUser ? (
-          <LoggedInView currentUser={props.currentUser} />
+        {currentUser ? (
+          <LoggedInView currentUser={currentUser} />
         ) : (
-          <LoggedOutView currentUser={props.currentUser} />
+          <LoggedOutView currentUser={currentUser} />
         )}
       </nav>
     );
